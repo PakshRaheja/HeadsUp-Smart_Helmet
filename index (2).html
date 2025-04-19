@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heads UP! Smart Helmet</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Heads UP!</div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#camera">Camera Feed</a>
+            <a href="#location">Location</a>
+        </div>
+    </nav>
+    
+    <div id="home" class="page active">
+        <div class="hero">
+            <h1>Welcome to Heads UP!</h1>
+            <h2>The Smart Helmet for Smart Kids!</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2152/2152349.png" alt="Helmet">
+                    <h3>Smart Protection</h3>
+                    <p>Keep your head safe with our advanced helmet technology!</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1160/1160358.png" alt="Camera">
+                    <h3>Live Camera</h3>
+                    <p>See what your child sees in real-time!</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Location">
+                    <h3>Location Tracking</h3>
+                    <p>Always know where your little one is!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="camera" class="page">
+        <h2>Live Camera Feed</h2>
+        <div class="camera-container">
+          <img id="videoFeed" src="https://172.20.10.2:5000/video_feed" alt="Live Camera Feed">
+            <div class="camera-controls">
+                <button onclick="startCamera()">Start Camera</button>
+                <button onclick="stopCamera()">Stop Camera</button>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="location" class="page">
+        <h2>Location Tracking</h2>
+        <div id="map"></div>
+        <div class="location-info">
+            <p>Last Updated: <span id="lastUpdate">--</span></p>
+            <p>Status: <span id="status">Offline</span></p>
+        </div>
+    </div>
+
+    
+    <div id="fall-alert">🚨 FALL DETECTED!</div>
+
+    
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="./static/script.js"></script>
+</body>
+</html>
+
